@@ -32,7 +32,7 @@
 		"_type": "Diffuse"
 	    },
 	    {
-		"diffuse": "1.0 0.0 0.0",
+		"diffuse": "0.6 0.0 0.0",
 		"_name": "redMat",
 		"_type": "Diffuse"
 	    }
