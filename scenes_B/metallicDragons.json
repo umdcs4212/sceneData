@@ -16,30 +16,13 @@
 		"width": 5.0,
 		"length": 5.0,
 		"_type": "area"
-	    },
-	    {
-		"position": "-2.0 10.0 3.0",
-		"intensity": "1.0 1.0 1.0",
-		"normal": "0.0 -1.0 0.0",
-		"width": 5.0,
-		"length": 5.0,
-		"_type": "area"
-	    },
-	    {
-		"position": "2.0 10.0 4.0",
-		"intensity": "1.0 1.0 1.0",
-		"normal": "0.0 -1.0 0.0",
-		"width": 10.0,
-		"length": 10.0,
-		"_type": "area"
 	    }
 	],
 	"shader": [
 	    {
 		"diffuse": "0.5 0.5 0.5",
-		"mirrorCoef": 0.30,
 		"_name": "greyGlaze",
-		"_type": "Glaze"
+		"_type": "Diffuse"
 	    },
 	    {
 		"diffuse": "0 0 1",
@@ -47,25 +30,34 @@
 		"_type": "Lambertian"
 	    },
 	    {
+		"diffuse": "1.0 0.7 0.7",
+		"roughness": 0.01,
+		"_name": "blueMirror",
+		"_type": "Metal"
+	    },
+	    {
 		"diffuse": "0.75164 0.60648 0.22648",
 		"specular": "0.628281 0.555802 0.366065",
 		"phongExp": 51.2,
+		"roughness": 1.0,
 		"_name": "gold",
-		"_type": "BlinnPhong"
+		"_type": "Metal"
 	    },
 	    {
 		"diffuse": "0.714 0.4284 0.18144",
 		"specular": "0.393548 0.271906 0.166721",
 		"phongExp": 25.6,
+		"roughness": 0.5,
 		"_name": "bronze",
-		"_type": "BlinnPhong"
+		"_type": "Metal"
 	    },
 	    {
 		"diffuse": "0.50754 0.50754 0.50754",
 		"specular": "0.508273 0.508273 0.508273",
 		"phongExp": 51.2,
+		"roughness": 0.5,
 		"_name": "silver",
-		"_type": "BlinnPhong"
+		"_type": "Metal"
 	    }
 	],
 	"shape": [
@@ -77,6 +69,16 @@
 		"maxPt": "20.0 0.0 20.0",
 		"_name": "ground",
 		"_type": "box"
+	    },
+
+	    {
+		"shader": {
+		    "_ref": "blueMirror"
+		},
+		"center": "0.2 0.0 2.2",
+		"radius": 1.0,
+		"_name": "sphere",
+		"_type": "sphere"
 	    },
 	    
 	    {
